@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.view.MainActivity"
+    tools:ignore="VectorDrawableCompat">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/lg_bgHeader_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_220"
+        android:background="@drawable/header_login"
+        android:elevation="5dp" />
+
+    <TextView
+        android:id="@+id/lg_tvDesc_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_40"
+        android:elevation="@dimen/dp_5"
+        android:text="@string/welcome"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_17"
+        android:fontFamily="@font/novecentosans_demibold"/>
+
+    <TextView
+        android:id="@+id/lg_tvLogin_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lg_tvDesc_id"
+        android:transitionName="tvLogin"
+        android:layout_alignStart="@+id/lg_tvDesc_id"
+        android:elevation="@dimen/dp_5"
+        android:text="@string/login"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_35"
+        android:textStyle="bold"
+        android:fontFamily="@font/novecentosans_ultrabold"/>
+
+    <ImageView
+        android:id="@+id/lg_circle1_id"
+        android:layout_width="@dimen/dp_134"
+        android:layout_height="@dimen/dp_134"
+        android:layout_below="@+id/lg_bgHeader_id"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="-100dp"
+        android:src="@drawable/circletransparant" />
+
+    <ImageView
+        android:id="@+id/circle2_id"
+        android:layout_width="@dimen/dp_134"
+        android:layout_height="@dimen/dp_134"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-100dp"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:src="@drawable/circletransparant"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:id="@+id/circle3_id"
+        android:layout_width="@dimen/dp_182"
+        android:layout_height="@dimen/dp_182"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-80dp"
+        android:layout_marginBottom="-30dp"
+        android:src="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/circle4_id"
+        android:layout_width="@dimen/dp_134"
+        android:layout_height="@dimen/dp_134"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-50dp"
+        android:layout_marginBottom="-50dp"
+        android:layout_toStartOf="@+id/circle3_id"
+        android:src="@drawable/circletransparant" />
+
+    <ScrollView
+        android:id="@+id/lg_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lg_bgHeader_id">
+
+        <RelativeLayout
+            android:id="@+id/lg_rLayout_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/lg_cvLoginForm_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_20"
+                app:cardCornerRadius="@dimen/dp_10"
+                app:cardElevation="@dimen/dp_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:text="@string/email"
+                        android:textColor="@color/colorLightBlue"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/lg_edt_email_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/email"
+                        android:textColorHint="@color/hintTextColor"
+                        android:textSize="@dimen/sp_14"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:text="@string/password"
+                        android:textColor="@color/colorLightBlue"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/id_edt_pass_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:inputType="textPassword"
+                        android:hint="@string/password"
+                        android:textColorHint="@color/hintTextColor"
+                        android:textSize="@dimen/sp_14"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lg_cvLoginForm_id"
+                android:layout_alignStart="@+id/lg_cvLoginForm_id"
+                android:layout_alignEnd="@+id/lg_cvLoginForm_id"
+                android:layout_marginLeft="@dimen/dp_35"
+                android:layout_marginRight="@dimen/dp_35"
+                android:layout_marginTop="-50dp"
+                android:elevation="10dp">
+
+                <Button
+                    android:id="@+id/lg_btLogin_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_login"
+                    android:text="@string/login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/novecentosans_medium"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/lg_cvLoginForm_id"
+                android:layout_alignEnd="@+id/lg_cvLoginForm_id"
+                android:layout_marginTop="-20dp"
+                android:layout_marginEnd="-20dp"
+                android:elevation="10dp">
+
+                <ImageButton
+                    android:id="@+id/lg_btRegister_id"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@drawable/bg_login"
+                    android:src="@drawable/ic_add" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/lg_tvForgot_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lg_cvLoginForm_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:elevation="@dimen/dp_5"
+                android:text="@string/forgot_password"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lg_tvForgot_id"
+                android:layout_alignStart="@+id/lg_cvLoginForm_id"
+                android:layout_alignEnd="@+id/lg_cvLoginForm_id"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/bt_uifb"
+                android:drawableStart="@drawable/logofacebook"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                android:text="@string/login_with_facebook"
+                android:textColor="@color/colorPurple"
+                android:fontFamily="@font/novecentosans_medium"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_register.view.RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/re_bgHeader_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_120"
+        android:background="@drawable/header_register"
+        android:theme="@style/ToolbarTheme"
+        android:elevation="@dimen/dp_5" />
+
+    <TextView
+        android:id="@+id/re_tvBanner_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_40"
+        android:elevation="@dimen/dp_10"
+        android:transitionName="tvLogin"
+        android:text="@string/sign_up"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_35"
+        android:textStyle="bold"
+        android:fontFamily="@font/novecentosans_ultrabold"/>
+
+    <ImageView
+        android:id="@+id/circle1_id"
+        android:layout_width="@dimen/dp_134"
+        android:layout_height="@dimen/dp_134"
+        android:layout_below="@+id/re_bgHeader_id"
+        android:layout_marginLeft="-25dp"
+        android:layout_marginTop="-5dp"
+        android:src="@drawable/circletransparant" />
+
+    <ImageView
+        android:id="@+id/circle3_id"
+        android:layout_width="@dimen/dp_182"
+        android:layout_height="@dimen/dp_182"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-80dp"
+        android:layout_marginBottom="-30dp"
+        android:src="@drawable/circle" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/re_bgHeader_id"
+        android:layout_margin="@dimen/dp_20">
+        <RelativeLayout
+            android:id="@+id/re_rLayout_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/re_cvSignUp_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dp_10"
+                app:cardElevation="@dimen/dp_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:text="@string/email"
+                        android:textColor="@color/colorLightBlue"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/re_edtEmail_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="@color/hintTextColor"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:text="@string/username"
+                        android:textColor="@color/colorLightBlue"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/re_edtUserNam_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:inputType="text"
+                        android:hint="@string/username"
+                        android:textColorHint="@color/hintTextColor"
+                        android:textSize="@dimen/sp_14"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:text="@string/fullname"
+                        android:textColor="@color/colorLightBlue"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/re_edtFullName_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:inputType="text"
+                        android:hint="@string/fullname"
+                        android:textColorHint="@color/hintTextColor"
+                        android:textSize="@dimen/sp_14"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:text="@string/password"
+                        android:textColor="@color/colorLightBlue"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/re_edtPass_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:inputType="textPassword"
+                        android:hint="@string/password"
+                        android:textColorHint="@color/hintTextColor"
+                        android:textSize="@dimen/sp_14"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/retype_password"
+                        android:textColor="@color/colorLightBlue"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/re_edtRetypePass_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:inputType="textPassword"
+                        android:hint="@string/retype_password"
+                        android:textColorHint="@color/hintTextColor"
+                        android:textSize="@dimen/sp_14"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/re_rSignUp_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/re_cvSignUp_id"
+                android:layout_alignStart="@+id/re_cvSignUp_id"
+                android:layout_alignEnd="@+id/re_cvSignUp_id"
+                android:layout_marginLeft="@dimen/dp_35"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="@dimen/dp_35"
+                android:elevation="@dimen/dp_10">
+
+                <Button
+                    android:id="@+id/re_btSignUp_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_login"
+                    android:text="@string/sign_up"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp_16"
+                    android:fontFamily="@font/novecentosans_demibold"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/re_tvHaveAcc_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/re_rSignUp_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:elevation="@dimen/dp_5"
+                android:text="@string/have_acc"
+                android:textSize="@dimen/sp_14" />
+
+
+            <ProgressBar
+                android:id="@+id/re_progress_id"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

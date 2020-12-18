@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ManageClub</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    //Login + Register
+    <string name="welcome">"Chào mừng đến với Manage Club"</string>
+    <string name="login">Đăng Nhập</string>
+    <string name="username">Tên Đăng Nhập</string>
+    <string name="password">Mật Khẩu</string>
+    <string name="forgot_password">Quên Mật Khẩu?</string>
+    <string name="login_with_facebook">Đăng nhập bằng FaceBook</string>
+    <string name="sign_up">Đăng Ký</string>
+    <string name="have_acc">Đã có tài khoản? Kích để Đăng Nhập</string>
+    <string name="email">Email</string>
+    <string name="retype_password">Nhập lại Mật Khẩu</string>
+
+    //Notification
+    <string name="home">Trang chủ</string>
+    <string name="notification">Thông báo</string>
+    <string name="setting">Cài đặt</string>
+    <string name="member">Thành viên</string>
+    <string name="listMember">Danh sách</string>
+
+    //Home
+    <string name="searchText">Tìm kiếm</string>
+    <string name="category">Danh mục</string>
+    <string name="fullname">Họ và tên</string>
+</resources>
